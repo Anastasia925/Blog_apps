@@ -1,0 +1,9 @@
+flask db migrate -m "comment" - генерация сценария (без изменений)
+flask db upgrade - применить изменения в базе данных
+flask db downgrade - отменяет последнюю миграцию
+
+при     ERROR [flask_migrate] Error: Target database is not up to date.
+\/\/\/\/\/
+flask db stamp head
+flask db migrate -m "comment"
+flask db upgrade
